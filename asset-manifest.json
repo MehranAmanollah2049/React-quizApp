@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-quizApp/static/css/main.37f60443.css",
-    "main.js": "/React-quizApp/static/js/main.189cf086.js",
+    "main.js": "/React-quizApp/static/js/main.a6939f07.js",
     "static/js/909.c499c33d.chunk.js": "/React-quizApp/static/js/909.c499c33d.chunk.js",
     "static/css/987.339e4ac8.chunk.css": "/React-quizApp/static/css/987.339e4ac8.chunk.css",
     "static/js/987.11c64986.chunk.js": "/React-quizApp/static/js/987.11c64986.chunk.js",
@@ -43,7 +43,7 @@
     "static/media/Morabba-Regular.woff": "/React-quizApp/static/media/Morabba-Regular.69af74c3873f1901bb2e.woff",
     "index.html": "/React-quizApp/index.html",
     "main.37f60443.css.map": "/React-quizApp/static/css/main.37f60443.css.map",
-    "main.189cf086.js.map": "/React-quizApp/static/js/main.189cf086.js.map",
+    "main.a6939f07.js.map": "/React-quizApp/static/js/main.a6939f07.js.map",
     "909.c499c33d.chunk.js.map": "/React-quizApp/static/js/909.c499c33d.chunk.js.map",
     "987.339e4ac8.chunk.css.map": "/React-quizApp/static/css/987.339e4ac8.chunk.css.map",
     "987.11c64986.chunk.js.map": "/React-quizApp/static/js/987.11c64986.chunk.js.map",
@@ -77,6 +77,6 @@
   },
   "entrypoints": [
     "static/css/main.37f60443.css",
-    "static/js/main.189cf086.js"
+    "static/js/main.a6939f07.js"
   ]
 }
