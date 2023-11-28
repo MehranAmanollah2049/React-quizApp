@@ -1,0 +1,232 @@
+
+.ContainerMain {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.containerSec {
+
+    width: var(--width);
+    height: auto;
+    float: right;
+}
+
+.MenuTop {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightMenuTop {
+
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+
+.lefttMenuTop {
+
+    width: auto;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.titlePage {
+
+    font-size: 35px;
+    color: var(--title);
+    font-family: 'yekan_Fat';
+    float: right;
+}
+
+.titlePage span {
+    color: var(--warning);
+    font-family: 'yekan_Fat';
+}
+
+.rightMenuTop svg {
+
+    width: 35px;
+    height: 35px;
+    float: right;
+    fill: var(--title);
+}
+
+.Menu_btns {
+
+    width: auto;
+    height: 50px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 1.3rem;
+    border-radius: 8px;
+    background-color: var(--info);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.Menu_btns.panel {
+    background-color: var(--warning);
+}
+
+.Menu_btns:hover {
+    background-color: var(--title) !important;
+}
+
+.Menu_btns.logOut {
+    background-color: #ef00281a ;
+}
+.Menu_btns.logOut svg g {
+    stroke: #ef0027;
+    transition: 0.2s ease-in-out;
+}
+.Menu_btns.logOut span {
+    color: #ef0027;
+}
+.Menu_btns.logOut:hover {
+    background-color: #ef0027 !important;
+}
+.Menu_btns.logOut:hover svg g {
+    stroke: #fff;
+}
+.Menu_btns.logOut:hover span {
+    color: #fff;
+}
+
+.Menu_btns span {
+
+    font-size: 16px;
+    color: #fff;
+    float: right;
+    font-family: 'yekan_Medium';
+    transition: 0.2s ease-in-out;
+}
+
+.Menu_btns svg {
+    width: 21px;
+    height: 21px;
+    float: right;
+}
+
+.Quizs_con {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.Quizs_con .Card {
+
+    width: calc(100% / 2 - 10px);
+}
+
+.loadingUser {
+
+    width: auto;
+    height: auto;
+    float: right;
+    position: relative;
+}
+
+.loadingUser svg {
+    
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+.loadingCards {
+
+    width: 100%;
+    height: 400px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingCards svg {
+
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.EmptyPage {
+
+    width: 100%;
+    height: 400px;
+    float: right;
+    font-size: 25px;
+    color: var(--title2);
+    font-family: 'yekan_Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media(max-width: 1010px) {
+
+    .Quizs_con .Card {
+        width: 100%;
+    }
+}
+
+@media(max-width: 520px) {
+
+    .ContainerMain {
+        padding: 3rem 0;
+    }
+
+    .MenuTop {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .lefttMenuTop {
+        width: 100%;
+        padding: 0 5rem;
+    }
+    .Menu_btns {
+        width: 100%;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .quiz_box {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .data_quiz {
+        flex-wrap: wrap;
+        gap: 10px !important;
+    }
+}

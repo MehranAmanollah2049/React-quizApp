@@ -1,0 +1,44 @@
+
+.panelSection {
+    padding: 0 0 8rem;
+}
+
+.SectionContainer {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    background-color: #fff;
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem 2rem;
+    
+}
+
+
+.titleForm::after , .titleTable::after  {
+    top: -1.5rem !important;
+}
+
+.Int-box.num-2 {
+    width: calc(100% / 2 - 10px) !important;
+}
+.Int-box.num-1 {
+    width: 100% !important;
+}
+
+.uploaderImg {
+    padding: 0 0 0.7rem !important;
+}
+
+.int-section , .topSelect , .select-box {
+    height: 52px !important;
+}
+.int-section input , .selected-text , .int-label {
+    font-size: 14px !important;
+}
+
+
+
+/* exam page */
+

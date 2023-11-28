@@ -1,0 +1,84 @@
+
+.Option {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkBoxCon {
+    width: 27px;
+    height: 27px;
+    float: right;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e3e6ec;
+
+}
+
+.option-text {
+    float: right;
+    font-size: 16px;
+    font-family: 'yekan_Medium';
+    color: #566581;
+    transform: translateY(1px);
+}
+
+.checkBoxCon svg {
+    width: 14px;
+    height: 14px;
+    float: right;
+    fill: transparent;
+}
+.checkBoxCon svg.x {
+    width: 11px;
+    height: 11px;
+}
+
+.checkBoxCon.checked svg {
+    fill: #fff;
+}
+
+.checkBoxCon.checked.orange {
+    background-color: var(--warning);
+}
+.checkBoxCon.checked.red {
+    background-color: var(--error);
+}
+.checkBoxCon.checked.green {
+    background-color: var(--success);
+}
+
+.yourChoice {
+    position: absolute;
+    right: calc(100% + 15px);
+    font-size: 14px;
+    font-family: 'yekan_Bold';
+    color: var(--title);
+    white-space: nowrap;
+    transform: translateY(1px);
+}
+
+.yourChoice.green {
+    color: var(--success);
+}
+.yourChoice.red {
+    color: var(--error);
+}
+
+.Option .loadingSvg {
+    width: 17px;
+    height: 17px;
+    stroke: var(--title) !important;
+}
+
+.Option .checkBoxCon.checked .loadingSvg {
+    stroke: #fff !important;
+}

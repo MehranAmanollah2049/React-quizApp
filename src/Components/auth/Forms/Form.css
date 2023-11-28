@@ -1,0 +1,127 @@
+
+.FormContent {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleForm {
+
+    width: auto;
+    height: auto;
+    float: right;
+    font-size: 28px;
+    font-family: 'yekan_Heavy';
+    color: var(--title);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.titleForm::after {
+
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    content: "";
+    top: -10px;
+    background-color: var(--info);
+    border-radius: 0 0 10px 10px;
+}
+
+.intsForm {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.buttonOptions {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 2rem 0 0;
+}
+
+.buttonOptions button {
+    width: auto;
+    height: 55px;
+    float: right;
+    background-color: var(--info);
+    padding: 0 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'yekan_Medium';
+}
+
+.buttonOptions button:hover {
+    background-color: var(--title);
+}
+.buttonOptions button.loading {
+    pointer-events: none;
+}
+.buttonOptions button svg {
+
+    width: 26px;
+    height: 26px;
+    float: right;
+}
+
+
+
+@media(max-width: 1000px) {
+    .uploaderImg {
+        flex-direction: column;
+    }
+    .right_upload_infos .title_image {
+        width: 100%;
+        overflow: visible !important;
+        white-space: normal !important;
+        text-align: center !important;
+    }
+    .right_upload_infos {
+        width: 100% !important;
+        align-items: center !important;
+    }
+}
+
+@media(max-width: 670px) {
+    .Int-box , .Int-box.num-2 {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 600px) {
+    .buttonOptions {
+        flex-direction: column;
+    }
+    .buttonOptions button {
+        width: 100% !important;
+    }
+}

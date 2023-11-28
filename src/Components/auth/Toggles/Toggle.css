@@ -1,0 +1,60 @@
+
+.Toggle-btn {
+
+    width: 55px;
+    height: 30px;
+    float: right;
+    border-radius: 50px;
+    padding: 0.2rem;
+    background-color: #f1f1f3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.Toggle-btn::after {
+    width: 20px;
+    height: 20px;
+    float: right;
+    background-color: var(--title);
+    left: 0.3rem;
+    content: "";
+    position: absolute;
+    border-radius: 100px;
+    transition: 0.2s ease-in-out;
+    border: solid 1.5px transparent;
+}
+
+.Toggle-btn.active {
+    background-color: var(--success);
+}
+.Toggle-btn.active::after {
+    left: calc(100% - 20px - 0.3rem);
+    background-color: #fff;
+}
+
+.Toggle-btn.loading::after {
+
+    background-color: transparent;
+    animation: loading 1s linear infinite;
+}
+.Toggle-btn:not(.active).loading::after {
+    border-top-color: var(--title);
+    border-bottom-color: var(--title);
+}
+.Toggle-btn.active.loading::after {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg) scale(0.80);
+    }
+    100% {
+        transform: rotate(360deg) scale(0.80);
+    }
+}

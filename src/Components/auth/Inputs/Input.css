@@ -1,0 +1,432 @@
+
+.Int-box {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.int-label {
+
+    font-size: 13.5px;
+    color: var(--text3);
+    float: right;
+    font-family: 'yekan_Medium';
+    margin-right: 10px;
+}
+
+.int-section {
+
+    width: 100%;
+    height: 44px;
+    float: right;
+    background-color: #aab3c116;
+    border-radius: 10px;
+    border: solid 1.5px transparent;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.int-section input {
+
+    width: 100%;
+    text-align: right;
+    float: right;
+    height: 100%;
+    border-radius: inherit;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0.1rem 1rem 0;
+    color: var(--title);
+    font-size: 13px;
+}
+
+.int-section:focus-within {
+    border-color: var(--info);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.int-section input.padding-left {
+    padding: 0.1rem 1rem 0 50px;
+}
+
+.int-section .iconEye {
+
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.int-section .iconEye svg {
+    stroke: var(--text2);
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+
+/* select */
+
+.select-box {
+
+    width: 100%;
+    height: 44px;
+    float: right;
+    position: relative;
+    z-index: 5;
+    transition-delay: 0.4s;
+}
+
+.select-box.active {
+    z-index: 152;
+    transition-delay: 0s !important;
+}
+
+.select-overlay {
+
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+.select-overlay.active {
+    display: block;
+    z-index: 150;
+}
+
+.int-section-select {
+
+    width: 100%;
+    float: right;
+    background-color: #aab3c116;
+    border-radius: 10px;
+    border: solid 1.5px transparent;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.int-section-select.open {
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    border-color: var(--info);
+}
+
+.topSelect {
+
+    width: 100%;
+    height: 44px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 0.7rem;
+    cursor: pointer;
+    border-bottom: solid 1.5px transparent;
+    transition: 0.3s ease-in-out;
+}
+.int-section-select.open .topSelect {
+    border-color: #4b5a782e;
+}
+
+.selected-text {
+
+    width: calc(100% - 30px);
+    float: right;
+    text-align: right;
+    color: var(--text3);
+    font-size: 13px;
+    font-family: 'yekan_Medium';
+    user-select: none;
+}
+
+.topSelect svg {
+
+    width: 17px;
+    height: 17px;
+    float: right;
+    stroke: var(--text3);
+    transition: 0.3s ease-in-out
+}
+
+.int-section-select.open .topSelect svg {
+
+    transform: rotate(90deg);
+}
+
+.selectBoxDrp {
+
+    width: 100%;
+    float: right;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 7;
+}
+
+
+.select-box-under {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+   
+}
+
+.search-box-select {
+
+    width: 100%;
+    height: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6fafb;
+    border-bottom: solid 1.5px #4b5a782e;
+}
+
+.search-box-select input {
+    width: 100%;
+    height: 100%;
+    float: right;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    background: none;
+    color: var(--title);
+}
+
+.select-options {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-y: auto;
+    max-height: 250px !important;
+    padding: 0.5rem 0;
+}
+
+.empty-select {
+
+    width: 100%;
+    height: 60px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'yekan_Bold';
+    color: var(--title3);
+}
+
+.select-option {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.option-text {
+
+    font-size: 14px;
+    color: var(--title);
+    float: right;
+}
+
+.select-option:not(.selected):hover {
+    background-color: #4b5a7811;
+}
+.select-option.selected:hover {
+    background-color: #22c55e13;
+}
+.select-option:not(.selected):hover .check-select {
+    
+    background-color: #fff;
+}
+
+.check-select {
+
+    width: 20px;
+    height: 20px;
+    float: right;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b5a7811;
+    transition: 0.2s ease-in-out;
+}
+.select-option .check-select  svg  {
+    width: 10px;
+    height: 10px;
+    float: right;
+    fill: transparent;
+    transform: translateY(-0.1px);
+    transition: 0.3s ease-in-out
+}
+
+.select-option.selected .check-select {
+    background-color: var(--success) !important;
+}
+.select-option.selected .check-select  svg {
+    fill: #fff;
+}
+
+/* image uploader */
+
+
+.uploaderImg {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.ImagesUploder_box {
+
+    width: 110px;
+    height: 110px;
+    float: right;
+    border-radius: 100px;
+    background-color: var(--bgTheme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.ImagesUploder_box .uploaded_layer {
+
+    width: 100%;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    transition: 0.2s ease-in-out;
+}
+
+.ImagesUploder_box.uploaded .uploaded_layer {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ImagesUploder_box .uploaded_layer svg {
+
+    width: 55px;
+    height: 55px;
+    float: right;
+    fill: var(--title3); 
+}
+
+
+.right_upload_infos {
+
+    width: calc(100% - 120px);
+    float: right;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right_upload_infos .title_image {
+
+    font-size: 17px;
+    float: right;
+    font-family: 'yekan_Medium';
+    color: var(--title);
+    width: 100%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right_upload_infos .btnsUploder {
+
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.right_upload_infos .btnsUploder .btn {
+
+    width: auto;
+    height: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-size: 14px;
+    border: solid 1.5px transparent;
+}
+
+.right_upload_infos .btnsUploder .btn:hover {
+    background-color: transparent !important;
+}
+
+.right_upload_infos .btnsUploder .btn.blue {
+    background-color: var(--info);
+}
+.right_upload_infos .btnsUploder .btn.blue:hover {
+
+    border-color: var(--info);
+    color: var(--info);
+}
+
+.right_upload_infos .btnsUploder .btn.red {
+    background-color: var(--error);
+}
+
+.right_upload_infos .btnsUploder .btn.red:hover {
+
+    border-color: var(--error);
+    color: var(--error);
+}

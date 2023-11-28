@@ -1,0 +1,160 @@
+
+.Card {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 13px;
+    padding: 2rem;
+    z-index: 0;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.Card:hover {
+    
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
+.Card::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -100px;
+    border-radius: 100px;
+    background-color: #3b83f615;
+    box-shadow: 0 0 0 40px #3b83f607 , 0 0 0 75px #3b83f607;
+}
+
+.Card .totalQuizCon {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.ImageQuiz {
+
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px var(--success);
+    overflow: hidden;
+}
+
+.ImageQuiz img {
+    width: 100%;
+    height: 100%;
+    float: right;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.Quiz_titles {
+
+    width: calc(100% - 120px);
+    height: auto;
+    float: right;
+}
+
+.title_exam {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    float: right;
+    color: var(--title);
+    font-family: 'yekan_Heavy';
+    font-size: 27px;
+    transition: 0.2s ease;
+    margin-bottom: 6px;
+}
+
+.Card:hover .title_exam {
+    color: var(--success);
+}
+
+.Quiz_titles span {
+
+    float: right;
+    font-size: 17px;
+    color: var(--text);
+}
+
+.data_quiz {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.quiz_box {
+
+    width: auto;
+    max-width: calc(100% / 3);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.quiz_box svg {
+
+    width: 38px;
+    height: 38px;
+    float: right;
+}
+
+.box_infos {
+
+    width: calc(100% - 50px);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title_box {
+
+    font-size: 15px;
+    color: var(--text);
+    float: right;
+}
+
+.box_val {
+
+    font-size: 18px;
+    color: var(--title2);
+    font-family: 'yekan_Medium';
+    float: right;
+}

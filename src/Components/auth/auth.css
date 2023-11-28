@@ -1,0 +1,201 @@
+
+.Authenticte-container {
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 4rem 0;
+}
+
+.Authenticte-section {
+
+    width: 450px;
+    height: auto;
+    float: right;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 2rem 3rem;
+}
+
+.st0 {
+    fill: #ffffff;
+    }
+
+.st1 {
+    fill: #ff9900;
+    }
+
+.st2 {
+    fill: #ff3333;
+}
+
+.st3 {
+    fill: #637789;
+}
+
+.auth-pages {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-btns {
+
+    width: auto;
+    height: 48px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border-radius: 10px;
+    padding: 0 1.3rem;
+    background-color: transparent;
+    transition: 0.2s ease-in-out
+}
+.auth-btns span {
+
+    font-size: 17px;
+    color: var(--info);
+    float: right;
+    font-family: 'yekan_Medium';
+    transition: 0.2s ease-in-out
+}
+
+.auth-btns svg {
+    width: 21px;
+    height: 21px;
+    float: right;
+    transform: translateY(-0.5px);
+    transition: 0.2s ease-in-out
+}
+.auth-btns.sign-up svg g {
+    stroke: var(--info);
+}
+.auth-btns.log-in svg  {
+    stroke: var(--info);
+}
+
+.auth-btns:not(.active):hover {
+    background-color: #3b83f612;
+}
+
+
+.auth-btns:not(.active):hover span {
+    color: var(--info);
+}
+
+.auth-btns.active {
+ background-color: var(--info);   
+}
+.auth-btns.active span {
+    color: #fff;
+}
+.auth-btns.log-in.active svg {
+    stroke: #fff;
+}
+.auth-btns.sign-up.active svg g {
+    stroke: #fff;
+}
+
+
+.Auth-section {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 2rem 0 0;
+}
+
+.title_auth {
+
+    width: 100%;
+    text-align: center;
+    float: right;
+    font-size: 27px;
+    font-family: 'yekan_Bold';
+    color: var(--title3);
+    margin-bottom: 1px;
+}
+
+.about_auth {
+
+    font-size: 16px;
+    float: right;
+    width: 100%;
+    text-align: center;
+    color: var(--text3);
+    font-family: 'yekan_Medium';
+}
+
+.ints-content {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 2rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.SubmitBtn {
+
+    width: 100%;
+    height: 55px;
+    float: right;
+    background-color: var(--info);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.SubmitBtn span {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'yekan_Medium';
+    float: right;
+}
+
+.SubmitBtn:hover {
+    
+    background-color: var(--title);
+}
+
+.SubmitBtn.loading {
+    pointer-events: none;
+}
+
+.SubmitBtn svg {
+
+    width: 23px;
+    height: 23px;
+}
+
+
+@media(max-width: 500px) {
+    .Authenticte-section {
+        width: 95%;
+        padding: 2rem 1.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+
+.Tooltip {
+
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    height: auto;
+    top: 90%;
+    z-index: 8;
+    background-color: #fff;
+    box-shadow: 0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0px 6.55094px 65.5094px rgba(0, 0, 0, 0.247);
+    border-radius: 7px;
+    padding: 0.5rem 0.7rem;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    pointer-events: none;
+    line-height: 20px;
+    font-family: 'yekan_Medium';
+}

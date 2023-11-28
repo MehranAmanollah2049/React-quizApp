@@ -1,0 +1,320 @@
+
+@font-face {
+    font-family: 'yekan_Regular';
+    src: url(./../Font/yekanBakh/Yekan-Bakh-FaNum-04-Regular.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Medium';
+    src: url(./../Font/yekanBakh/Yekan-Bakh-FaNum-05-Medium.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Bold';
+    src: url(./../Font/yekanBakh/Yekan-Bakh-FaNum-06-Bold.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Heavy';
+    src: url(./../Font/yekanBakh/Yekan-Bakh-FaNum-07-Heavy.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Fat';
+    src: url(./../Font/yekanBakh/Yekan-Bakh-FaNum-08-Fat.woff);
+}
+
+@font-face {
+    font-family: 'rokh';
+    src: url(./../Font/Rokh/RokhFaNum-Bold.eot);
+    src: url(./../Font/Rokh/RokhFaNum-Bold.woff);
+}
+
+@font-face {
+    font-family: 'morabba_Regular';
+    src: url(./../Font/morabba/Morabba-Regular.woff);
+}
+
+@font-face {
+    font-family: 'morabba_Bold';
+    src: url(./../Font/morabba/Morabba-Bold.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'yekan_Regular';
+}
+
+:root {
+    --bgTheme: #f2f3f5;
+    --title: #364357;
+    --title2: #4b5a78;
+    --title3: #64748b;
+    --text: #aab3c1;
+    --text2: #4b5a78c8;
+    --text3: #4b5a7898;
+    --success: #22c55e;
+    --error: #f33;
+    --warning: #ffa826;
+    --info: #3b82f6;
+    --width: 1150px;
+    --shadow: 0 0 #0000,0 0 #0000,0 0 #0000,0 0 #0000,0px 6.55094px 65.5094px rgba(0,0,0,.04);
+    --Exam-Width: 1000px
+}
+
+a , a:hover , a:focus {
+    text-decoration: none !important;
+    color: none;
+}
+ 
+body {
+
+    background-color: var(--bgTheme);
+    direction: rtl;
+}
+
+#root {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    overflow: clip;
+    position: relative;
+}
+
+.NotificationContainer {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 12px;
+    padding: 1rem 1rem 0;
+    pointer-events: none;
+    z-index: 10000000;
+}
+
+.Toast {
+
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    transition: 0.2s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 60px 0 #0000001b;
+}
+
+.Toast svg {
+
+    width: 21.5px;
+    height: 21px;
+    float: right;
+    fill: #fff;
+}
+.Toast.success svg {
+    fill: var(--success);
+}
+.Toast.error svg {
+    fill: var(--error);
+}
+.Toast.warning svg  {
+    width: 26px;
+    height: 26px;
+    fill: var(--warning);
+}
+
+.Toast span {
+
+    width: calc(100% - 30px);
+    float: right;
+    font-family: 'yekan_Medium';
+    color: var(--title);
+    font-size: 15px;
+}
+
+.Toast.show {
+    animation: showToast 0.3s ease-in-out 1 forwards;
+}
+.Toast.remove {
+    animation: removeToast 0.3s ease-in-out 1 forwards;
+}
+
+@keyframes showToast {
+    from {
+        margin-top: var(--margin);
+        transform: scale(0.80);
+        opacity: 0;
+    }
+    to {
+        margin-top: 0 !important;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes removeToast {
+    from {
+        margin-top: 0;
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        margin-top: var(--margin);
+        transform: scale(0.50);
+        opacity: 0;
+    }
+}
+
+.Toast .progressBar {
+
+    width: 0%;
+    height: 2px;
+    background-color: var(--bgTheme);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.Toast.success .progressBar {
+    background-color: var(--success);
+}
+.Toast.error .progressBar {
+    background-color: var(--error);
+}
+.Toast.warning .progressBar {
+    background-color: var(--warning);
+}
+
+.Toast.show .progressBar  {
+    animation: progressBar var(--timer) linear 1 forwards;
+}
+
+@keyframes progressBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.LoadingAll {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loading-spinner {
+
+    height: 22px;
+    width: 22px;
+    color: #ffffff48;
+    position: relative;
+    border: 3px solid;
+    border-radius: 50%;
+    border-right-color: #fff;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.containerAll {
+    width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+    overflow: clip;
+}
+
+
+@media(max-width: 1500px) {
+
+    :root {
+        --width: 95%;
+    }
+}
+
+
+.ripple-btn {
+    position: relative;
+    overflow: hidden;
+}
+.ripple-btn * {
+    user-select: none;
+}
+
+.ripple-btn .ripple-span {
+
+    width: 10px;
+    height: 10px;
+    float: right;
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    background-color: #ffffff1d;
+    border-radius: 100px;
+    transition: 1s linear;
+}
+
+.ripple-btn .ripple-span.ripple-active {
+    animation: ripple-shadow 1s linear forwards;
+}
+.ripple-btn .ripple-span.ripple-remove {
+    opacity: 0;
+}
+
+@keyframes ripple-shadow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(80);
+    }
+}
+
+
+.Error404 {
+
+    width: 100%;
+    height: 100vh;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: var(--title);
+    font-family: 'yekan_Fat';
+}
+

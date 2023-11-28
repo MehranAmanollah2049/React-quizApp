@@ -1,0 +1,738 @@
+.ContrainerExam {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.ExamSection {
+
+    width: var(--Exam-Width);
+    height: auto;
+    float: right;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 6.55094px 65.5094px rgba(0, 0, 0, 0.071);
+    border-radius: 8px;
+}
+
+.topExamSec {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.goHomeLink {
+
+    width: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.goHomeLink:hover {
+    opacity: 0.5;
+}
+
+.goHomeLink svg {
+    width: 16px;
+    height: 16px;
+    float: right;
+    stroke: #9da7b7;
+    transform: translateY(-1px);
+}
+
+.goHomeLink span {
+    font-size: 15px;
+    color: #9da7b7;
+    float: right;
+}
+
+.QuizName {
+    width: 100%;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 21px;
+    color: #4b5a78;
+    font-family: 'yekan_Heavy';
+}
+
+.bottomExamSec {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 1rem;
+}
+
+.ExamSecBox {
+
+    width: 100%;
+    height: auto;
+    float: right;
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: var(--shadow);
+}
+
+
+/* start page */
+
+.StartBoxPage {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.IconBox {
+
+    width: 120px;
+    height: 120px;
+    float: right;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.IconBox svg {
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+
+.IconBox.orange {
+    background-color: #ffe5bd;
+}
+
+.IconBox.orange svg {
+    fill: var(--warning);
+}
+
+.IconBox.green {
+    background-color: #22c55e18;
+}
+
+.IconBox.green svg {
+    fill: var(--success);
+}
+
+
+.IconBox.red {
+    background-color: rgba(255, 51, 51, 0.059);
+}
+
+.IconBox.red svg {
+    fill: var(--error);
+}
+
+.examName {
+    color: #4b5a78;
+    font-size: 26px;
+    font-family: 'yekan_Heavy';
+    float: right;
+    margin: 10px 0 5px;
+}
+
+.Exam-detailsCon {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.Exam-detailsCon .line {
+    width: 1.5px;
+    height: 14px;
+    float: right;
+    border-radius: 50px;
+    background-color: #d0d5dc;
+}
+
+.ExamDetailBox {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.ExamDetailBox svg {
+    width: 23px;
+    height: 23px;
+    float: right;
+    transform: translateY(-2.5px);
+}
+
+.ExamDetailBox p {
+    float: right;
+    font-size: 18px;
+    color: #4b5a78;
+    font-family: 'yekan_Bold';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px;
+}
+
+.ExamDetailBox p span {
+    color: var(--info);
+    font-family: 'yekan_Bold';
+}
+
+.StartBtn {
+    width: auto;
+    height: 50px;
+    float: right;
+    background-color: var(--warning);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.5rem;
+    border: solid 1.5px transparent;
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'yekan_Bold';
+    margin: 15px 0;
+}
+
+.StartBtn:not(.loading):not(.red) {
+    cursor: pointer;
+}
+
+.StartBtn.red {
+    background-color: var(--error);
+}
+
+.StartBtn:not(.loading):not(.red):hover {
+    background-color: #fff;
+    border-color: var(--warning);
+    color: var(--warning);
+}
+
+.StartBtn.loading {
+    pointer-events: none;
+}
+
+.StartBtn .ripple-span {
+    background-color: #ffa8262f;
+}
+
+.StartBtn svg {
+    width: 25px;
+    height: 25px;
+}
+
+.warningBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.warningBox svg {
+    width: 20px;
+    height: 19px;
+    float: right;
+}
+
+.warningBox span {
+    float: right;
+    font-size: 16px;
+    color: #a4adbc;
+}
+
+.loadinPage {
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.loadinPage svg {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+
+/* question page */
+
+.topQuestionBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 13px 13px 0 0;
+    border-bottom: solid 1.5px #eef0f1;
+}
+
+.rightTopQBox {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.leftTopQBox {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.IconBox-sm {
+
+    width: 37px;
+    height: 37px;
+    float: right;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.IconBox-sm svg {
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+.IconBox-sm.orange {
+    background-color: #ffe5bd;
+}
+
+.rightTopQBox span {
+    float: right;
+    font-size: 15px;
+    font-family: 'yekan_Bold';
+    color: #4b5a78;
+}
+
+.ExamDetailBox.sm p {
+    font-size: 16px;
+}
+
+.ExamDetailBox.sm svg {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-1px);
+}
+
+.botomQuestionBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 1.4rem 2rem;
+}
+
+.currentQ {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 20px;
+    color: var(--text3);
+    font-family: 'yekan_Bold';
+    margin-bottom: 4px;
+}
+
+.question-text {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 20px;
+    color: #4b5a78;
+    font-family: 'yekan_Bold';
+}
+
+.optionsAllCon {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    margin: 28px 0 20px;
+}
+
+.btnSlidesAll {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 10px;
+}
+
+.btnSlides {
+    width: auto;
+    height: 47px;
+    float: right;
+    background-color: var(--info);
+    border: solid 1.5px transparent;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    padding: 0 1.4rem;
+}
+
+.btnSlides span {
+    font-size: 15px;
+    font-family: 'yekan_Bold';
+    float: right;
+    color: #fff;
+}
+
+.btnSlides .btnSvg {
+    width: 16px;
+    height: 16px;
+    float: right;
+    fill: #fff;
+    transform: translateY(-1px);
+}
+
+.btnSlides:not(.disable):hover {
+    background-color: #fff;
+    border-color: var(--info);
+}
+
+.btnSlides:not(.disable):hover span {
+    color: var(--info);
+}
+
+.btnSlides:not(.disable):hover .btnSvg {
+    fill: var(--info);
+}
+
+
+
+.btnSlides.loading {
+    background-color: var(--info) !important;
+    opacity: 1 !important;
+}
+
+
+
+
+
+
+
+.btnSlides.disable {
+    background-color: #fff;
+    border-color: var(--info);
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.btnSlides.loading {
+    pointer-events: none;
+}
+
+.btnSlides.disable span {
+    color: var(--info);
+}
+
+.btnSlides.disable .btnSvg {
+    fill: var(--info);
+}
+
+
+.btnSlides:not(.disable):not(.loading) {
+    cursor: pointer;
+}
+
+.loadingSvgBtn {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+/* result page */
+
+.result-text {
+    width: 100%;
+    text-align: center;
+    font-size: 29px;
+    font-family: 'yekan_Heavy';
+    color: #4b5a78;
+    margin: 5px 0 8px;
+}
+
+.result-text span {
+    font-family: 'yekan_Heavy';
+    color: #4b5a78;
+}
+
+.result-text.green span {
+    color: var(--success);
+}
+
+.result-text.orange span {
+    color: var(--warning);
+}
+
+.result-text.red span {
+    color: var(--error);
+}
+
+.advice-box {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 -3px;
+}
+
+.advice-box svg {
+    width: 24px;
+    height: 24px;
+    float: right;
+    fill: var(--title);
+    transform: translateY(-0.8px);
+}
+
+.advice-box.green svg {
+    fill: var(--success);
+}
+
+.advice-box.orange svg {
+    fill: var(--warning);
+}
+
+.advice-box.red svg {
+    fill: var(--error);
+}
+
+.advice-box p {
+    float: right;
+    font-size: 17px;
+    color: #4b5a78;
+}
+
+.advice-box.green p span {
+    color: var(--success);
+}
+
+.advice-box.orange p span {
+    color: var(--warning);
+}
+
+.advice-box.red p span {
+    color: var(--error);
+}
+
+.advice-box2 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #8b919b;
+    margin: 0;
+}
+
+.btnBoxAll {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btnBox {
+    width: 220px;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.changePageBtn {
+    width: 100%;
+    height: 50px;
+    float: right;
+    background-color: var(--info);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 1rem;
+    border-radius: 4px;
+    border: solid 1.5px transparent;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.changePageBtn span {
+    font-size: 17px;
+    font-family: 'yekan_Bold';
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.changePageBtn:hover {
+    background-color: #fff;
+    border-color: var(--info);
+}
+
+.changePageBtn:hover span {
+    color: var(--info);
+}
+
+.changePageBtn svg {
+    width: 18px;
+    height: 18px;
+    float: right;
+    fill: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.changePageBtn:hover svg {
+    fill: var(--info);
+}
+
+.double-btn {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnExam {
+    width: calc(100% / 2);
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #95a0b1;
+    transition: 0.2s ease-in-out;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.btnExam:hover {
+    color: var(--title3);
+}
+
+.btnExam.border {
+    border: solid 1.5px #95a0b1b8;
+}
+
+.btnExam.border:hover {
+    background-color: #95a0b1;
+    color: #fff;
+    border-color: #95a0b1;
+}
+
+
+@media(max-width: 1042px) {
+
+    .ExamSection {
+        width: 95%;
+    }
+}
+
+@media(max-width: 800px) {
+
+    .bottomExamSec {
+        padding: 0;
+    }
+    .ExamSecBox {
+        border-radius: 0 0 8px 8px;
+        box-shadow: none;
+    }
+    .Exam-detailsCon {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .Exam-detailsCon .line {
+        display: none;
+    }
+    .ExamDetailBox {
+        width: 100%;
+    }
+    .StartBtn {
+        height: auto;
+        min-height: 50px;
+        padding: 0.5rem 3rem;
+        text-align: center;
+        font-size: 16px;
+    }
+    .warningBox  {
+        flex-direction: column;
+    }
+    .warningBox span {
+        text-align: center;
+    }
+
+    .StartBoxPage {
+        padding: 3rem 1.5rem;
+    }
+    .advice-box svg {
+        display: none;
+    }
+    .advice-box p {
+        width: 100%;
+        text-align: center;
+    }
+}

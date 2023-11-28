@@ -1,0 +1,42 @@
+
+.DrpBtn {
+    
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    color: var(--title2);
+    font-family: 'yekan_Medium';
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.DrpBtn:hover {
+    background-color: #eaeaec32;
+}
+
+.DrpBtn.red {
+    color: var(--error);
+}
+.DrpBtn.red:hover {
+    background-color: rgba(255, 51, 51, 0.082);
+}
+
+
+.DrpBtn.blue {
+    color: var(--info);
+}
+.DrpBtn.blue:hover {
+    background-color: #3b83f618;
+}
+
+
+.DrpBtn.green {
+    color: var(--success);
+}
+.DrpBtn.green:hover {
+    background-color: #22c55e14;
+}
